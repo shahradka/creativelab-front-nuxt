@@ -6,3 +6,7 @@ allowBuilds:
   esbuild: true
   workerd: true
   sharp: true
+  '@parcel/watcher': false
+  vue-demi: false
+minimumReleaseAgeExclude:
+  - '@types/node@26.1.1'
