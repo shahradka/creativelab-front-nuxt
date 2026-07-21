@@ -25,7 +25,7 @@ useHead({
           </template>
           <template #right>
             <JobTimelineJobPosImg place="right">
-              <NuxtImg fit="fill" src="/images/invi.png" width="500" height="300"/>
+              <NuxtImg src="/images/invi.png" class="w-full"/>
             </JobTimelineJobPosImg>
           </template>
         </JobTimelineJobPos>
@@ -38,7 +38,7 @@ useHead({
           </template>
           <template #left>
             <JobTimelineJobPosImg place="left">
-                <NuxtImg fit="fill" src="/images/codetech-screen.png" width="500" height="300"/>
+                <NuxtImg fit="fill" src="/images/codetech-screen.png"  class="h-full"/>
             </JobTimelineJobPosImg>
           </template>
         </JobTimelineJobPos>
@@ -51,7 +51,7 @@ useHead({
           </template>
           <template #right>
             <JobTimelineJobPosImg place="right">
-                <NuxtImg fit="fill" src="/images/tiddev-screen.png" width="500" height="300"/>
+                <NuxtImg  src="/images/tiddev-screen.png"  class="w-full"/>
             </JobTimelineJobPosImg>
           </template>
         </JobTimelineJobPos>
@@ -64,9 +64,28 @@ useHead({
           </template>
           <template #left>
             <JobTimelineJobPosImg place="left">
-                <NuxtImg fit="fill" src="/images/samaneh-paydar.png" width="500" height="300"/>
+                <NuxtImg src="/images/samaneh-paydar.png"  class="w-full"/>
             </JobTimelineJobPosImg>
           </template>
         </JobTimelineJobPos>
-    </JobTimelineBase>
+      </JobTimelineBase>
+      <FullTechStackBase>
+        <FullTechStackDesc />
+        <ClientOnly>
+          <FullTechStackCarousel />
+        </ClientOnly>
+      </FullTechStackBase>
+      <SnapshotProfessionalBase>
+        <SnapshotProfessionalDesc />
+        <SnapshotProfessionalSummary />
+      </SnapshotProfessionalBase>
+      <SoftSkillsBase>
+        <SoftSkillsDesc />
+        <SoftSkillsAvatar />
+        <SoftSkills />
+      </SoftSkillsBase>
+      <SetAppointmentBase>
+        <SetAppointmentDesc />
+        <SetAppointmentVideo />
+      </SetAppointmentBase>
 </template>

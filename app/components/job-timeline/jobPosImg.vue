@@ -9,7 +9,7 @@ import { cn } from '~/lib/utils';
 </script>
 
 <template>
-<div :class="cn('bg-neutral-950 size-full flex flex-col items-center justify-center', place === 'right' ? 'rounded-l-2xl' : 'rounded-r-2xl')">        
+<div :class="cn('bg-neutral-950 h-128 flex flex-col items-center justify-center border-y-4 border-foreground', place === 'right' ? 'rounded-l-2xl border-l-4' : 'rounded-r-2xl border-r-4')">        
     <slot />
     </div>
 </template>

@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-    <div class="flex flex-col text-left">
+    <div class="flex flex-col text-left place-self-center">
         <div class="mb-6 outline-8 outline-[var(--highlight)]:brightness-30 size-14 rounded-full bg-[var(--highlight)] flex flex-col justify-center items-center">
             <slot />
         </div>

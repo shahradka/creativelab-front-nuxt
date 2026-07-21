@@ -28,7 +28,12 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ["nitro-cloudflare-dev", "shadcn-nuxt", '@nuxt/image'],
+  modules: [
+    "nitro-cloudflare-dev",
+    "shadcn-nuxt",
+    '@nuxt/image',
+    'v-gsap-nuxt',
+  ],
 
   shadcn: {
     prefix: '',

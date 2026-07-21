@@ -1,0 +1,7 @@
+<template>
+    <div class="col-start-8 col-span-6 bg-neutral-950 rounded-l-2xl h-128 pt-2 pl-2">
+        <video autoplay loop muted playsinline class="size-full object-cover">
+            <source src="/videos/set-appointment.webm" type="video/webm" />
+        </video>
+    </div>
+</template>

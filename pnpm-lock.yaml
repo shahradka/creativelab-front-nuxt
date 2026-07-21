@@ -35,6 +35,9 @@ importers:
       tailwind-merge:
         specifier: ^3.6.0
         version: 3.6.0
+      v-gsap-nuxt:
+        specifier: 1.5.12
+        version: 1.5.12(magicast@0.5.3)
       vue:
         specifier: ^3.5.39
         version: 3.5.39(typescript@5.9.3)
@@ -2681,6 +2684,9 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
+  gsap@3.15.0:
+    resolution: {integrity: sha512-dMW4CWBTUK1AEEDeZc1g4xpPGIrSf9fJF960qbTZmN/QwZIWY5wgliS6JWl9/25fpTGJrMRtSjGtOmPnfjZB+A==}
+
   gzip-size@7.0.0:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -4064,6 +4070,9 @@ packages:
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  v-gsap-nuxt@1.5.12:
+    resolution: {integrity: sha512-ojOnvUPZGvFpFfpHUO37EgQjtfHwLs7ASqBqIjkZB5p6JwI0FH9VaprDJy8s5ZQAC/tKeWHEn6YFoyjw/git2Q==}
 
   vite-dev-rpc@2.0.0:
     resolution: {integrity: sha512-yKwbTwdHKSD2k/aGqyWpPHepo45OQc8lH3/6IfT4ZqeKE26ooKvi4WIEKzqWav8v+9Is8u1k8q54hvOmqASazA==}
@@ -6838,6 +6847,8 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
+  gsap@3.15.0: {}
+
   gzip-size@7.0.0:
     dependencies:
       duplexer: 0.1.2
@@ -8567,6 +8578,14 @@ snapshots:
     optional: true
 
   util-deprecate@1.0.2: {}
+
+  v-gsap-nuxt@1.5.12(magicast@0.5.3):
+    dependencies:
+      '@nuxt/kit': 3.21.8(magicast@0.5.3)
+      defu: 6.1.7
+      gsap: 3.15.0
+    transitivePeerDependencies:
+      - magicast
 
   vite-dev-rpc@2.0.0(vite@7.3.6(@types/node@26.1.1)(jiti@2.7.0)(lightningcss@1.32.0)(stylus@0.57.0)(terser@5.48.0)(yaml@2.9.0)):
     dependencies:
