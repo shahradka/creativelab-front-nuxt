@@ -1,10 +1,10 @@
 <script setup lang="ts">
-    const itemStyles = "text-xl gap-1 flex items-center";
+    const itemStyles = "text-lg gap-3 flex items-center flex-col lg:flex-row";
 </script>
 
 <template>
-    <div class="col-start-2 col-span-10 grid grid-flow-col justify-between">
-        <div :class="itemStyles">
+<div class="grid lg:grid-flow-col gap-4 grid-cols-2 lg:grid-cols-none justify-items-center lg:justify-items-stretch lg:col-start-2 col-span-10">        
+    <div :class="itemStyles">
             <NuxtImg src="/images/Next.js.svg" alt="Next.js" width="50" height="50" />
             Next.js
         </div>

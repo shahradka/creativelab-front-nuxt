@@ -1,5 +1,5 @@
 <template>
-    <div class="col-span-5 col-start-2 place-self-center">
+    <div class="lg:col-span-5 lg:col-start-2 place-self-center col-span-3 lg:px-0 px-8">
         <div class="text-4xl font-bold mb-8">
             Let’s build something incredible together
         </div>

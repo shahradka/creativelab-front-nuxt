@@ -24,7 +24,7 @@ useHead({
             </JobTimelineJobDesc>
           </template>
           <template #right>
-            <JobTimelineJobPosImg place="right">
+            <JobTimelineJobPosImg place="right" class="hidden lg:block">
               <NuxtImg src="/images/invi.png" class="w-full"/>
             </JobTimelineJobPosImg>
           </template>
@@ -37,7 +37,7 @@ useHead({
             </JobTimelineJobDesc>
           </template>
           <template #left>
-            <JobTimelineJobPosImg place="left">
+            <JobTimelineJobPosImg place="left" class="hidden lg:block">
                 <NuxtImg fit="fill" src="/images/codetech-screen.png"  class="h-full"/>
             </JobTimelineJobPosImg>
           </template>
@@ -50,7 +50,7 @@ useHead({
             </JobTimelineJobDesc>
           </template>
           <template #right>
-            <JobTimelineJobPosImg place="right">
+            <JobTimelineJobPosImg place="right"  class="hidden lg:block">
                 <NuxtImg  src="/images/tiddev-screen.png"  class="w-full"/>
             </JobTimelineJobPosImg>
           </template>
@@ -63,7 +63,7 @@ useHead({
             </JobTimelineJobDesc>
           </template>
           <template #left>
-            <JobTimelineJobPosImg place="left">
+            <JobTimelineJobPosImg place="left"  class="hidden lg:block">
                 <NuxtImg src="/images/samaneh-paydar.png"  class="w-full"/>
             </JobTimelineJobPosImg>
           </template>

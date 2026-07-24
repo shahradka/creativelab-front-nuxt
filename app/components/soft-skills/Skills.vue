@@ -1,9 +1,9 @@
 <script setup lang="ts">
-    const itemClass = "flex justify-center items-center gap-2 text-xs"
+    const itemClass = "flex justify-center items-center gap-2 text-xs lg:flex-row flex-col mb-4"
 </script>
 
 <template>
-    <div class="col-span-10 col-start-2 grid grid-cols-5 mt-12">
+    <div class="lg:col-span-10 col-span-12 lg:col-start-2 grid lg:grid-cols-5 grid-cols-2 mt-12">
         <span :class="itemClass">
             <NuxtImg width="46" height="50" src="/images/authority-svgfind-com.svg" />
             <span>

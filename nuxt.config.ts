@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     '@nuxt/image',
     'v-gsap-nuxt',
+    'nuxt-viewport',
   ],
 
   shadcn: {

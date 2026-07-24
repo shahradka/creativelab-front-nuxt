@@ -11,43 +11,61 @@ import {
   NavigationMenuViewport,
 } from '@/components/ui/navigation-menu'
 import { cn } from '~/lib/utils';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+const viewPort = useViewport()
+
+const headerWrapperRef = ref<HTMLElement | null>(null)
+
+const gsap = useGSAP()
+
+onMounted(async() => {
+gsap.registerPlugin(ScrollTrigger)
+
+    ScrollTrigger.create({
+            start:"top -15px",
+            onEnter:() =>{
+                    gsap.to(headerWrapperRef.value, {boxShadow:"0px 0px 6px 0px #777", borderBottom: "1px solid #EEE", backgroundColor:"rgba(240, 240, 240, 0.5)", backdropFilter:"blur(20px)"})
+            },
+            onLeaveBack: () =>{
+                    gsap.to(headerWrapperRef.value, {boxShadow:"none", borderBottom: "none", backgroundColor:"rgba(240, 240, 240, 0.0)", backdropFilter:"none"})
+
+            }
+    })
+
+})
 </script>
 
 <template>
-    <div class="w-full h-10 bg-background/40 flex flex-col justify-center items-center rounded-lg border border-neutral-300 backdrop-blur-sm">
-    <NavigationMenu>
-        <NavigationMenuList>
-            <NavigationMenuItem>
-                <NavigationMenuLink as-child :class="cn(navigationMenuTriggerStyle(), 'text-xs bg-transparent')">
-                <a href="/docs">Home</a>
-                </NavigationMenuLink>            
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-                <NavigationMenuLink as-child :class="cn(navigationMenuTriggerStyle(), 'text-xs bg-transparent')">
-                <a href="/docs">CI/CD</a>
-                </NavigationMenuLink>      
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-                <NavigationMenuLink as-child :class="cn(navigationMenuTriggerStyle(), 'text-xs bg-transparent')">
-                <a href="/docs">Front-end</a>
-                </NavigationMenuLink>      
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-                <NavigationMenuLink as-child :class="cn(navigationMenuTriggerStyle(), 'text-xs bg-transparent')">
-                <a href="/docs">Back-end</a>
-                </NavigationMenuLink>      
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-                <NavigationMenuLink as-child :class="cn(navigationMenuTriggerStyle(), 'text-xs bg-transparent')">
-                <a href="/docs">AI</a>
-                </NavigationMenuLink>      
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-                <NavigationMenuLink as-child :class="cn(navigationMenuTriggerStyle(), 'text-xs bg-transparent')">
-                <a href="/docs">Design</a>
-                </NavigationMenuLink>      
-            </NavigationMenuItem>
-        </NavigationMenuList>
-    </NavigationMenu>
+    <div ref="headerWrapperRef" class="nav-menu lg:m-auto">
+        <Logo class="shrink" />
+        <div class="grow flex items-center lg:justify-center justify-end">
+            <NavigationMenu>
+                <NavigationMenuList >
+                    <NavigationMenuItem v-if="viewPort.isGreaterThan('tablet')" v-for="item in navItems">
+                        <NavigationMenuLink as-child :class="cn(navigationMenuTriggerStyle(), 'text-xs bg-transparent')">
+                        <a :href="item.link">{{ item.title }}</a>
+                        </NavigationMenuLink>            
+                    </NavigationMenuItem>
+                    <NavigationMenuItem v-else>
+                        <NavigationMenuLink as-child :class="cn(navigationMenuTriggerStyle(), 'bg-transparent')">
+                            <a><NuxtImg width="24" height="24" src="/images/burger.svg" /></a>
+                        </NavigationMenuLink>    
+                    </NavigationMenuItem>
+                </NavigationMenuList>
+            </NavigationMenu>
+        </div>
     </div>
 </template>
+
+<style scoped>
+    @reference "~/assets/css/tailwind.css";
+    .nav-menu {
+        @apply size-full flex flex-row justify-center ;
+
+    }
+
+    .nav-menu.moving{
+        @apply bg-background/40 shadow-sm justify-center items-center border border-neutral-300 backdrop-blur-sm
+    }
+</style>

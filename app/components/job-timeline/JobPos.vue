@@ -9,7 +9,7 @@ import { cn } from '~/lib/utils';
 </script>
 
 <template>
-    <div :class="cn('col-span-12 grid grid-cols-2 gap-x-24', imgPlace === 'right'? 'col-start-2': 'col-end-12')">
+    <div :class="cn('col-span-12 grid lg:grid-cols-2 gap-x-24', imgPlace === 'right'? 'lg:col-start-2': 'lg:col-end-12')">
         <slot name="left" />
         <slot name="right" />
     </div>
