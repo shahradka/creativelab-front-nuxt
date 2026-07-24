@@ -23,6 +23,7 @@
 		"shadcn-nuxt": "2.7.4",
 		"tailwind-merge": "^3.6.0",
 		"v-gsap-nuxt": "1.5.12",
+		"vaul-vue": "^0.4.1",
 		"vue": "^3.5.39",
 		"vue-router": "^5.1.0"
 	},
